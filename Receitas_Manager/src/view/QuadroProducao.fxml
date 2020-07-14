@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to left top, #04142c, #041833, #061b39, #071f40, #092247, #0b2954, #0e2f61, #11366f, #164286, #1b4e9e, #215bb6, #2768cf);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QuadroProduçãoController">
+   <children>
+      <AnchorPane layoutX="205.0" prefHeight="400.0" prefWidth="408.0" style="-fx-background-color: #333333;">
+         <children>
+            <JFXDatePicker fx:id="dpCalendario" defaultColor="#2768cf" layoutX="35.0" layoutY="49.0" prefHeight="25.0" prefWidth="157.0" promptText="Selecione uma data: " stylesheets="@../css/FonteQuadroProducao.css" />
+            <Label layoutX="35.0" layoutY="23.0" prefHeight="26.0" prefWidth="200.0" text="Data para análise:" textFill="WHITE" />
+            <JFXButton fx:id="btnAdicionar" disable="true" layoutX="271.0" layoutY="109.0" onAction="#adicionarProducao" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5em; -fx-border-color: #215bb6; -fx-border-radius: 5em;" text="Adicionar" textFill="#222222">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAtualizar" layoutX="35.0" layoutY="109.0" onAction="#atualizarProducao" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5em; -fx-border-color: #215bb6; -fx-border-radius: 5em;" text="Atualizar" textFill="#222222">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tvReceitasProdução" layoutX="16.0" layoutY="163.0" prefHeight="223.0" prefWidth="384.0">
+              <columns>
+                <TableColumn fx:id="TableColumnReceitas" prefWidth="126.0" text="Receitas" />
+                <TableColumn fx:id="TableColumnCustoReceita" prefWidth="78.0" text="Custo" />
+                  <TableColumn fx:id="TableColumnVendaReceita" prefWidth="102.0" text="Preço de Venda" />
+                  <TableColumn fx:id="TableColumnRemeças" prefWidth="84.0" text="Remeças" />
+              </columns>
+            </TableView>
+            <JFXComboBox fx:id="comboxReceitas" disable="true" layoutX="231.0" layoutY="49.0" prefHeight="25.0" prefWidth="157.0" promptText="Selecione uma receita" stylesheets="@../css/FonteQuadroProducao.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox layoutX="13.0" prefHeight="400.0" prefWidth="189.0" style="-fx-background-color: #222222;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="77.0" prefWidth="210.0" text="MENU" textAlignment="CENTER" textFill="WHITE" />
+                  <JFXButton id="btnRelatorioProdução" fx:id="btnRelatorio" prefHeight="51.0" prefWidth="226.0" text="Relatório de Produção" textFill="WHITE" textOverrun="CLIP" />
+                  <JFXButton id="btnListaIngrediente" fx:id="btnListaIngrediente" prefHeight="51.0" prefWidth="226.0" text="Lista de Ingredientes" textFill="WHITE" textOverrun="CLIP" />
+                  <JFXButton id="btnListaReceita" fx:id="btnListaReceita" prefHeight="51.0" prefWidth="226.0" text="Lista de Receitas" textFill="WHITE" textOverrun="CLIP" />
+                  <JFXButton id="btnListaReceita" fx:id="btnCadastroReceita" prefHeight="51.0" prefWidth="226.0" text="Cadastro de Receitas" textFill="WHITE" textOverrun="CLIP" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

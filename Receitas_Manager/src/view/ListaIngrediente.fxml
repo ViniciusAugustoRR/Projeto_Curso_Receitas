@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to left top, #04142c, #041833, #061b39, #071f40, #092247, #0b2954, #0e2f61, #11366f, #164286, #1b4e9e, #215bb6, #2768cf);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListaIngredienteController">
+   <children>
+      <AnchorPane layoutX="217.0" prefHeight="400.0" prefWidth="386.0" style="-fx-background-color: #333333;">
+         <children>
+            <JFXTextField fx:id="txtNomeIngrediente" alignment="CENTER" focusColor="#3c65cc" labelFloat="true" layoutX="34.0" layoutY="25.0" prefHeight="25.0" prefWidth="173.0" promptText="Nome do Ingrediente" stylesheets="@../css/FonteReceita.css" unFocusColor="#aea8a8d1" />
+            <JFXTextField fx:id="txtPreçoIngrediente" alignment="CENTER" focusColor="#3c65cc" labelFloat="true" layoutX="34.0" layoutY="82.0" prefHeight="25.0" prefWidth="167.0" promptText="Preço do fardo" stylesheets="@../css/FonteReceita.css" unFocusColor="#aea8a8d1" />
+            <JFXTextField fx:id="txtQuantFardo" accessibleRole="TOOLTIP" alignment="CENTER" cache="true" focusColor="#3c65cc" labelFloat="true" layoutX="34.0" layoutY="134.0" prefHeight="25.0" prefWidth="167.0" promptText="Quantia do Fardo" stylesheets="@../css/FonteReceita.css" unFocusColor="#aea8a8d1" />
+            <JFXButton fx:id="btnSalvarIngrediente" buttonType="RAISED" layoutX="224.0" layoutY="118.0" onAction="#cadastrarIngrediente" prefHeight="32.0" prefWidth="126.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #ffffff;" text="Salvar" textFill="#170000" />
+            <JFXButton fx:id="btnAtualizarIngrediente" layoutX="269.0" layoutY="223.0" onAction="#atualizarLista" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5em; -fx-border-color: #215bb6; -fx-border-radius: 5em;" text="Atualizar" textFill="#222222">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDeletarIngrediente" disable="true" layoutX="269.0" layoutY="270.0" onAction="#excluirDaLista" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5em; -fx-border-color: #215bb6; -fx-border-radius: 5em;" text="Deletar" textFill="#222222">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="263.0" layoutY="32.0" text="Atenção!" textFill="WHITE" />
+            <Label layoutX="217.0" layoutY="55.0" text="Fardo deve ser em Litros ou Quilos." textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Separator layoutX="1.0" layoutY="173.0" opacity="0.3" prefHeight="13.0" prefWidth="371.0" />
+            <Label layoutX="24.0" layoutY="190.0" text="Lista de Ingredientes:" textFill="WHITE" />
+            <TableView fx:id="tvListaIngredientes" layoutX="23.0" layoutY="209.0" prefHeight="177.0" prefWidth="231.0">
+              <columns>
+                <TableColumn fx:id="tableColumnNomeIngrediente" prefWidth="82.0" text="Nome" />
+                <TableColumn fx:id="tableColumnFardoIngrediente" prefWidth="68.0" text="Fardo" />
+                  <TableColumn fx:id="tableColumnPreçoIngrediente" text="Preço" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-4.0" layoutY="-1.0" prefHeight="400.0" prefWidth="231.0">
+         <children>
+            <VBox layoutX="14.0" prefHeight="400.0" prefWidth="210.0" style="-fx-background-color: #222222;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="77.0" prefWidth="210.0" text="MENU" textAlignment="CENTER" textFill="WHITE" />
+                  <JFXButton id="btnQuadroProdução" fx:id="btnQuadroProdução" prefHeight="51.0" prefWidth="226.0" text="Quadro de Produção" textFill="WHITE" textOverrun="CLIP" />
+                  <JFXButton id="btnRelatorioProdução" fx:id="btnRelatorio" prefHeight="51.0" prefWidth="226.0" text="Relatório de Produção" textFill="WHITE" textOverrun="CLIP" />
+                  <JFXButton id="btnListaReceita" fx:id="btnListaReceita" prefHeight="51.0" prefWidth="226.0" text="Lista de Receitas" textFill="WHITE" textOverrun="CLIP" />
+                  <JFXButton id="btnListaReceita" fx:id="btnCadastroReceita" prefHeight="51.0" prefWidth="226.0" text="Cadastro de Receitas" textFill="WHITE" textOverrun="CLIP" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

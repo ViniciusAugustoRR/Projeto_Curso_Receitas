@@ -1,0 +1,15 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08/06/2019, 23:59:40
+    Author     : Carvalho
+*/
+.text-input {
+    -fx-text-fill: #aea8a8;
+}
+.text-input:focused {
+    -fx-text-fill: #3c65cc;
+}

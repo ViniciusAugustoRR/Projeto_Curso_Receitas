@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to left top, #04142c, #041833, #061b39, #071f40, #092247, #0b2954, #0e2f61, #11366f, #164286, #1b4e9e, #215bb6, #2768cf);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioController">
+   <children>
+      <AnchorPane layoutX="201.0" prefHeight="400.0" prefWidth="422.0" style="-fx-background-color: #333333;">
+         <children>
+            <Label layoutX="35.0" layoutY="26.0" prefHeight="26.0" prefWidth="200.0" text="Relatório de Produção" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="dpRelatorio" defaultColor="#2768cf" layoutX="35.0" layoutY="96.0" prefHeight="25.0" prefWidth="157.0" promptText="Selecione uma data: " stylesheets="@../css/FonteQuadroProducao.css" />
+            <Label layoutX="35.0" layoutY="70.0" prefHeight="26.0" prefWidth="200.0" text="Data para análise:" textFill="WHITE" />
+            <JFXButton fx:id="btnAtualizarRelatorio" layoutX="283.0" layoutY="90.0" prefHeight="37.0" prefWidth="121.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5em; -fx-border-color: #215bb6; -fx-border-radius: 5em;" text="Atualizar" textFill="#222222" />
+            <TableView layoutX="35.0" layoutY="174.0" prefHeight="200.0" prefWidth="362.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="14.0" prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #222222;">
+         <children>
+            <Label alignment="CENTER" prefHeight="77.0" prefWidth="210.0" text="MENU" textAlignment="CENTER" textFill="WHITE" />
+            <JFXButton id="btnListaReceita" fx:id="btnQuadroProdução" prefHeight="51.0" prefWidth="226.0" text="Quadro de Produção" textFill="WHITE" textOverrun="CLIP" />
+            <JFXButton id="btnListaIngrediente" fx:id="btnListaIngrediente" prefHeight="51.0" prefWidth="226.0" text="Lista de Ingredientes" textFill="WHITE" textOverrun="CLIP" />
+            <JFXButton id="btnListaReceita" fx:id="btnListaReceita" prefHeight="51.0" prefWidth="226.0" text="Lista de Receitas" textFill="WHITE" textOverrun="CLIP" />
+            <JFXButton id="btnListaReceita" fx:id="btnCadastroReceita" prefHeight="51.0" prefWidth="226.0" text="Cadastro de Receitas" textFill="WHITE" textOverrun="CLIP" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
